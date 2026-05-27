@@ -1,0 +1,139 @@
+baseURL = "https://razvanblue.github.io"
+languageCode = 'en-us'
+title = 'Razvan Manea - Portfolio'
+theme = 'hugo-noir'
+
+# URL handling
+relativeURLs = true
+canonifyURLs = true
+#defaultContentLanguage = "en"
+#defaultContentLanguageInSubdir = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+    
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "Razvan Manea - Portfolio"
+    weight = 1
+    contentDir = "content/en"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = "About"
+        pageRef = "/about" # Corresponds to content/en/about.md or content/en/about/_index.md
+        weight = 1
+      [[languages.en.menu.main]]
+        name = "Experience"
+        pageRef = "/experience"
+        weight = 2
+      [[languages.en.menu.main]]
+        name = "Projects"
+        pageRef = "/projects"
+        weight = 3
+      [[languages.en.menu.main]]
+        name = "Contact"
+        pageRef = "/contact"
+        weight = 4
+
+[params]
+  # Basic profile information - common across languages
+  name = "Razvan Manea"
+  profile_image = "/images/profile_placeholder.jpg" # Place in your site's static/images/ directory
+  email = "razvan.razvanblue@gmail.com"
+  github = "https://github.com/razvanblue"
+  github_username = "razvanblue"
+  linkedin = "https://linkedin.com/in/razvanblue"
+  linkedin_username = "razvanblue"
+  discord = "holorocker"
+  # Add other social links as needed by the theme or your content
+  # twitter = "https://twitter.com/johndoe"
+  # twitter_username = "johndoe"
+  # medium = "https://medium.com/@johndoe"
+  # leetcode = "https://leetcode.com/johndoe"
+  # monkeytype = "https://monkeytype.com/profile/johndoe"
+  # kaggle = "https://www.kaggle.com/johndoe"
+  # instagram = "https://instagram.com/johndoe"
+
+[params.tech]
+  row1 = [
+    { icon = "devicon-git-plain", name = "Git" },
+    { icon = "devicon-docker-plain", name = "Docker" },
+    { icon = "devicon-kubernetes-plain", name = "Kubernetes" },
+  ]
+
+
+  # Example for adding honors/awards (optional, adapt to theme features)
+  [[params.honors]]
+    institution = "National Informatics Olympiad"
+    title = "Bronze Medal"
+    date = "2014"
+
+  [[params.honors]]
+    institution = '"Dan Barbilian" coding contest'
+    title = "1st Place"
+    date = "2015"
+
+  # Example for certifications (optional, adapt to theme features)
+  [[params.certifications]]
+    title = "Bachelor's Degree in Computer Science"
+    company = " Babeș Bolyai University"
+    date = "2020"
+    # url = "https://example.com/certification/123"
+
+  [[params.certifications]]
+    title = "ECDL – European Computer Driving Licence"
+    company = " ECDL"
+    date = "2014"
+    
+  [[params.certifications]]
+    title = "IT Essentials"
+    company = " Cisco Networking Academy"
+    date = "2014"
+
+
+[[params.experience]]
+company = "Telenav"
+role = "Software Engineer"
+period = "Nov 2019 - Jul 2025"
+logo = "/images/company/telenav_logo.jpg"
+description = "Responsible for improving the routing component in embedded navigation software and the map generation pipeline."
+responsibilities = [
+    "reduced alternative route calculation complexity, achieving 1.5x~12x faster times depending on route length.",
+    "Designed routing component from scratch in new project, Implemented specialised routing methods, templetized and rigorously unit tested.",
+    "Developed gRPC microservice in Kubernetes for calculating and refining road fitness on global scale",
+    "Developed road classification algorithm with hash tables and custom hash function for fast data access"
+]
+technologies = ["C++", "CMake", "Git", "Jenkins", "Docker", "Kubernetes", "Qt", "Jira"]
+
+[[params.projects]]
+title = "DesertBlade"
+description = "3D Action RPG demo"
+tech = "Unreal Engine 5, C++, Blender, Photopea"
+image = "/images/projects/sly.png"
+link = "https://github.com/razvanblue/DesertBlade"
+
+[[params.projects]]
+title = "Sly"
+description = "3D survival game"
+tech = "Unreal Engine 5, Blueprints, Blender, Photopea"
+image = "/images/projects/sly.png"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 1
+  [[menu.main]]
+    name = "Experience"
+    pageRef = "/experience"
+    weight = 2
+  [[menu.main]]
+    name = "Projects"
+    pageRef = "/projects"
+    weight = 3
+  [[menu.main]]
+    name = "Contact Me" # Note: "Contact" is used in language-specific menus above for consistency
+    pageRef = "/contact"
+    weight = 4 
