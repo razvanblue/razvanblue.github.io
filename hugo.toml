@@ -22,25 +22,25 @@ defaultContentLanguageInSubdir = true
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "About"
-        pageRef = "/about" # Corresponds to content/en/about.md or content/en/about/_index.md
+        url = "/about" # Corresponds to content/en/about.md or content/en/about/_index.md
         weight = 1
       [[languages.en.menu.main]]
         name = "Experience"
-        pageRef = "/experience"
+        url = "/experience"
         weight = 2
       [[languages.en.menu.main]]
         name = "Projects"
-        pageRef = "/projects"
+        url = "/projects"
         weight = 3
       [[languages.en.menu.main]]
         name = "Contact"
-        pageRef = "/contact"
+        url = "/contact"
         weight = 4
 
 [params]
   # Basic profile information - common across languages
   name = "Razvan Manea"
-  profile_image = "/images/profile_placeholder.jpg" # Place in your site's static/images/ directory
+  profile_image = "/images/projects/sly.png" # Place in your site's static/images/ directory
   email = "razvan.razvanblue@gmail.com"
   github = "https://github.com/razvanblue"
   github_username = "razvanblue"
@@ -123,17 +123,17 @@ image = "/images/projects/sly.png"
 [menu]
   [[menu.main]]
     name = "About"
-    pageRef = "/about"
+    url = "/about"
     weight = 1
   [[menu.main]]
     name = "Experience"
-    pageRef = "/experience"
+    url = "/experience"
     weight = 2
   [[menu.main]]
     name = "Projects"
-    pageRef = "/projects"
+    url = "/projects"
     weight = 3
   [[menu.main]]
     name = "Contact Me" # Note: "Contact" is used in language-specific menus above for consistency
-    pageRef = "/contact"
+    url = "/contact"
     weight = 4 
