@@ -7,7 +7,7 @@ theme = 'hugo-noir'
 relativeURLs = true
 canonifyURLs = true
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+#defaultContentLanguageInSubdir = true
 
 [caches]
   [caches.images]
@@ -40,6 +40,8 @@ defaultContentLanguageInSubdir = true
 [params]
   # Basic profile information - common across languages
   name = "Razvan Manea"
+  location = "Pitesti, RO"
+  description = "Former Software Engineer, pursuing my passion as a game developer."
   profile_image = "/images/projects/sly.png" # Place in your site's static/images/ directory
   email = "razvan.razvanblue@gmail.com"
   github = "https://github.com/razvanblue"
