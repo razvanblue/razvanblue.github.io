@@ -1,5 +1,5 @@
 baseURL = "https://razvanblue.github.io"
-locale = 'en-us'https://github.com/razvanblue/razvanblue.github.io/blob/master/hugo.toml
+locale = 'en-us'
 title = 'Razvan Manea - Portfolio'
 theme = 'hugo-noir'
 
