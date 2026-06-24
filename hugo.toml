@@ -1,5 +1,5 @@
 baseURL = "https://razvanblue.github.io"
-locale = 'en-us'
+locale = 'en-us'https://github.com/razvanblue/razvanblue.github.io/blob/master/hugo.toml
 title = 'Razvan Manea - Portfolio'
 theme = 'hugo-noir'
 
@@ -8,6 +8,10 @@ relativeURLs = true
 canonifyURLs = true
 defaultContentLanguage = "en"
 #defaultContentLanguageInSubdir = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 
 [caches]
   [caches.images]
