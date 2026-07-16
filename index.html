@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Razvan Manea - Portfolio</title>
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/aacbaf3c31.js" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="header-nav">
+    <div class="logo">Razvan Manea</div>
+    <nav class="nav-links">
+      <a href="#" class="nav-item active" data-target="about">About</a>
+      <a href="#" class="nav-item" data-target="experience">Experience</a>
+      <a href="#" class="nav-item" data-target="projects">Projects</a>
+      <a href="#" class="nav-item" data-target="contact">Contact</a>
+    </nav>
+    <div class="local-time" id="local-time">Local Time: --:-- --</div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="content-container">
+
+    <!-- ================= ABOUT PAGE (AGGREGATED VIEW) ================= -->
+    <section id="about-page" class="page-section active">
+      <!-- Hero/Bio Card -->
+      <div class="bio-card">
+        <div class="bio-header">
+          <div class="bio-title-group">
+            <h1>Razvan Manea</h1>
+            <span class="location"><i class="fa-solid fa-location-dot"></i> Pitesti</span>
+          </div>
+          <div class="social-icons">
+            <a href="mailto:razvan.razvanblue@gmail.com" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://github.com/razvanblue" target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/razvanblue" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <p class="bio-text">Former Software Engineer, pursuing my passion as a Game Developer.</p>
+        <p class="bio-text">I specialize in gameplay mechanics, systems, and immersive environment design.</p>
+        <p class="bio-text">Converting imagination into code.</p>
+      </div>
+
+      <!-- Tech Stack / What I work with -->
+      <div class="section-block">
+        <h2 class="section-title">What I work with</h2>
+        <div class="tech-ticker">
+          <div class="tech-track">
+            <span><i class="fa-brands fa-unity"></i> Unity</span>
+            <span><i class="fa-brands fa-unreal-engine"></i> Unreal Engine</span>
+            <span>C#</span>
+            <span>C++</span>
+            <span>Blender</span>
+            <!-- Duplicate for infinite scrolling effect if wanted -->
+            <span><i class="fa-brands fa-unity"></i> Unity</span>
+            <span><i class="fa-brands fa-unreal-engine"></i> Unreal Engine</span>
+            <span>C#</span>
+            <span>C++</span>
+            <span>Blender</span>
+            <span><i class="fa-brands fa-unity"></i> Unity</span>
+            <span><i class="fa-brands fa-unreal-engine"></i> Unreal Engine</span>
+            <span>C#</span>
+            <span>C++</span>
+            <span>Blender</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Block (Cropped with More button) -->
+      <div class="section-block">
+        <h2 class="section-title">Experience</h2>
+        <div id="experience-summary-list">
+          <!-- Populated dynamically via JS -->
+        </div>
+        <button class="more-btn" onclick="navigateTo('experience')">More Experience <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+      <!-- Projects Block (Cropped with More button) -->
+      <div class="section-block">
+        <h2 class="section-title">Projects</h2>
+        <div id="projects-summary-list" class="projects-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+        <button class="more-btn" onclick="navigateTo('projects')">More Projects <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </section>
+
+
+    <!-- ================= EXPERIENCE PAGE ================= -->
+    <section id="experience-page" class="page-section">
+      <h2 class="page-title">Experience</h2>
+      <div id="experience-full-list" class="experience-list">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </section>
+
+
+    <!-- ================= PROJECTS PAGE ================= -->
+    <section id="projects-page" class="page-section">
+      <h2 class="page-title">Projects</h2>
+      <div id="projects-full-list" class="projects-grid">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </section>
+
+
+    <!-- ================= CONTACT PAGE ================= -->
+    <section id="contact-page" class="page-section">
+      <h2 class="page-title">Contact Info</h2>
+      <div class="contact-card">
+        <p>Feel free to reach out for collaboration opportunities, project inquiries, or just to chat about games!</p>
+        <ul class="contact-links">
+          <li><strong>Email:</strong> <a href="mailto:razvan.razvanblue@gmail.com">razvan.razvanblue@gmail.com</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/razvanblue" target="_blank">razvanblue</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/razvanblue" target="_blank">razvanblue</a></li>
+          <li><strong>itch.io:</strong> <a href="https://holorocker.itch.io" target="_blank">holorocker</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+/* ================= GLOBAL & LAYOUT CONFIG ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d0d0d;
+  background-image: url("images/MilimNavaTransparent144.png");
+  background-size: cover;
+  background-position: 50%;
+  background-attachment: fixed;
+  color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header & Navigation Alignment */
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 10%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-item {
+  color: #8a8a8a;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+  color: #ffffff;
+}
+
+.local-time {
+  font-size: 0.9rem;
+  color: #8a8a8a;
+}
+
+/* Page Control */
+.content-container {
+  max-width: 800px; /* Aligned, tight layout like in screenshots */
+  margin: 2rem auto 8rem auto;
+  padding: 0 1.5rem;
+}
+
+.page-section {
+  display: none; /* Controlled via JS */
+}
+
+.page-section.active {
+  display: block;
+}
+
+/* Titles */
+.page-title, .section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+.section-block {
+  margin-top: 4rem;
+}
+
+/* ================= COMPONENT: BIO CARD ================= */
+.bio-card {
+  border: 1px solid #222222;
+  border-radius: 12px;
+  padding: 2rem;
+  background-color: #121212;
+  margin-bottom: 2rem;
+}
+
+.bio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.bio-title-group h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.location {
+  display: block;
+  font-size: 0.95rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+
+.social-icon:hover {
+  border-color: #555555;
+}
+
+.bio-text {
+  color: #f3f4f6;
+  font-size: 1rem;
+}
+
+/* Tech Stack Ticker (Visual decoration like in screenshot) */
+.tech-ticker {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.tech-track {
+  display: inline-flex;
+  gap: 2rem;
+  width: max-content;
+  animation: ticker 10s linear infinite;
+}
+
+.tech-track span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #828282;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-34%); }
+}
+
+/* ================= COMPONENT: EXPERIENCE WIDGET ================= */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.experience-item {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid #222;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #555;
+}
+
+.exp-company {
+  color: #9ca3af;
+  font-size: 1.25rem;
+}
+
+.exp-role {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.exp-duration {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.exp-desc {
+  color: #f5f5f5;
+  font-size: 0.95rem;
+}
+
+/* ================= COMPONENT: PROJECT WIDGET ================= */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 350px;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #222;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Semi-opaque overlay that shifts opacity on hover */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 10%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.1) 100%);
+  transition: background 0.6s ease;
+  z-index: 1;
+}
+
+.project-card:hover::before {
+  background: linear-gradient(to top, rgba(0,0,0,0.98) 20%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.5) 100%);
+}
+
+/* Card Content Slider Wrapper */
+.project-content {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+  width: 100%;
+  transform: translateY(45px); /* Push the contents down initially */
+  transition: transform 0.6s cubic-bezier(0.2, 1, 0.5, 1);
+}
+
+.project-card:hover .project-content {
+  transform: translateY(0); /* Pull up when hovered */
+}
+
+.project-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+/* Tags styling */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-tag {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #eaeaea;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  margin-bottom: 1.25rem;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.project-card:hover .project-desc {
+  opacity: 1;
+}
+
+/* Hover Learn More Button */
+.learn-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.project-card:hover .learn-more-btn {
+  opacity: 1;
+}
+
+/* ================= MISC UI ELEMENTS ================= */
+.more-btn {
+  background: transparent;
+  border: 1px solid #333333;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.more-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.contact-card {
+  border: 1px solid #222222;
+  border-radius: 12px;
+  padding: 2.5rem;
+  background-color: #121212;
+}
+
+.contact-links {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-links a {
+  color: #eaeaea;
+  text-decoration: none;
+  border-bottom: 1px dashed #555;
+}
+
+.contact-links a:hover {
+  color: #ffffff;
+  border-bottom-style: solid;
+}
