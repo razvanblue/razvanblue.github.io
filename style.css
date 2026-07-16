@@ -366,3 +366,68 @@ body {
   color: #ffffff;
   border-bottom-style: solid;
 }
+
+.achievements-container {
+  color: #ffffff;
+  padding: 60px 20px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.achievement-column {
+  flex: 1;
+}
+
+/* Headers and Font Awesome Icons */
+.column-title {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.column-title .icon {
+  margin-right: 12px;
+  font-size: 24px;
+}
+
+/* List Item Layout & Left Border styling */
+.achievement-item {
+  border-left: 2px solid #333333; /* The left-side vertical line */
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.ach-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin-bottom: 4px;
+}
+
+.ach-issuer {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.ach-year {
+  font-size: 12px;
+  color: #797e86;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+  .achievements-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}

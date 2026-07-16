@@ -25,6 +25,37 @@ const projects = [
   }
 ];
 
+const awards = [
+  {
+    title: "Bronze Medal",
+    issuer: "National Informatics Olympiad",
+    year: "2014"
+  },
+  {
+    title: "1st Place",
+    issuer: '"Dan Barbilian" coding contest',
+    year: "2015"
+  }
+];
+
+const certifications = [
+  {
+    title: "Bachelor's Degree in Computer Science",
+    issuer: "", // Leave blank if not needed
+    year: "2020"
+  },
+  {
+    title: "ECDL – European Computer Driving Licence",
+    issuer: "",
+    year: "2014"
+  },
+  {
+    title: "IT Essentials",
+    issuer: "",
+    year: "2014"
+  }
+];
+
 // ================= DYNAMIC INJECTION ENGINE =================
 const ABOUT_EXP_LIMIT = 1;  // Crop amount on About page
 const ABOUT_PRJ_LIMIT = 1;  // Crop amount on About page
@@ -43,6 +74,15 @@ function renderHTML() {
 
   prjSummaryContainer.innerHTML = generatePrjHTML(projects.slice(0, ABOUT_PRJ_LIMIT));
   prjFullContainer.innerHTML = generatePrjHTML(projects);
+
+  // 3. Render Achievements
+  const achContainer = document.getElementById("awards-list");
+  const certContainer = document.getElementById("certs-list");
+
+  achContainer.innerHTML = generateAchievementsHTML(awards);
+  certContainer.innerHTML = generateAchievementsHTML(certifications);
+
+
 }
 
 function generateExpHTML(items) {
@@ -70,6 +110,16 @@ function generatePrjHTML(items) {
         </div>
       </div>
     </a>
+  `).join("");
+}
+
+function generateAchievementsHTML(items) {
+  return items.map(item => `
+    <div class="achievement-item">
+      <div class="ach-title">${item.title}</div>
+      ${item.issuer ? `<div class="ach-issuer">${item.issuer}</div>` : ''}
+      <div class="ach-year">${item.year}</div>
+    </div>
   `).join("");
 }
 
